@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+    <title>Login Aplikasi Simpan Pinjam</title>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light id=mainNav">
+            <img src="logosimpanpinjam.svg" width="12%">
+            <div class="container-fluid">
+              <a class="navbar-brand js-scroll-trigger" href="index.html">Beranda</a>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active js-scroll-trigger " aria-current="page" href="transaksi.html">Transaksi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="profil.html">Profil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="login.html">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+    </header>
+
+    <form id="login">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Alamat E-mail</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nama</label>
+          <input type="email" class="form-control" id="exampleInputName" aria-describedby="NameInput">
+        </div>
+      
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <br>
+
+      <!--footer-->
+    <footer class="text-black mb-3" style="background-color: rgba(114, 216, 247, 0.808);">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        &copy; 2024 Amanda Putri Dewi 241011701098
+      </div>
+    </footer>
+      
+     <script type="text/javascript" src="bootstrap.min.js"></script>
+
+     <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        let isValid = true;
+        const emailInput = document.getElementById('exampleInputEmail1');
+        const nameInput = document.getElementById('exampleNameInput');
+        const passwordInput = document.getElementById('exampleInputPassword1');
+        // Reset styles and messages
+        emailInput.style.borderColor = '';
+        nameInput.style.borderColor = '';
+        passwordInput.style.borderColor = '';
+
+        // Check if email is empty
+        if (!emailInput.value.trim()) {
+          emailInput.style.borderColor = 'red';
+          isValid = false;
+        }
+
+        // Check if name is empty
+        if (!nameInput.value.trim()) {
+          nameInput.style.borderColor = 'red';
+          isValid = false;
+        }
+
+        // Check if password is empty
+        if (!passwordInput.value.trim()) {
+          passwordInput.style.borderColor = 'red';
+          isValid = false;
+        }
+
+        // Prevent form submission if validation fails
+        if (!isValid) {
+          alert('Semua kolom harus diisi!');
+          event.preventDefault();
+        }
+      });
+    </script>
+
+    </body>
+  </html>
