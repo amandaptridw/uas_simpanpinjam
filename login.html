@@ -69,42 +69,6 @@
       
      <script type="text/javascript" src="bootstrap.min.js"></script>
 
-     <script>
-      document.getElementById('loginForm').addEventListener('submit', function(event) {
-        let isValid = true;
-        const emailInput = document.getElementById('exampleInputEmail1');
-        const nameInput = document.getElementById('exampleNameInput');
-        const passwordInput = document.getElementById('exampleInputPassword1');
-        // Reset styles and messages
-        emailInput.style.borderColor = '';
-        nameInput.style.borderColor = '';
-        passwordInput.style.borderColor = '';
-
-        // Check if email is empty
-        if (!emailInput.value.trim()) {
-          emailInput.style.borderColor = 'red';
-          isValid = false;
-        }
-
-        // Check if name is empty
-        if (!nameInput.value.trim()) {
-          nameInput.style.borderColor = 'red';
-          isValid = false;
-        }
-
-        // Check if password is empty
-        if (!passwordInput.value.trim()) {
-          passwordInput.style.borderColor = 'red';
-          isValid = false;
-        }
-
-        // Prevent form submission if validation fails
-        if (!isValid) {
-          alert('Semua kolom harus diisi!');
-          event.preventDefault();
-        }
-      });
-    </script>
 
     </body>
   </html>
